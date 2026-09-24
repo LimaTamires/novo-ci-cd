@@ -13,12 +13,11 @@ jobs:
     strategy:
       max-parallel: 3
       matrix:
-        python-version: ['3.12', '3.13', '3.11']
+        python-version: ['3.12', '3.13']
 
     env:
       SECRET_KEY: ${{ secrets.SECRET_KEY }}
       DEBUG: "False"
-      ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: "true"
 
     steps:
     - uses: actions/checkout@v4
