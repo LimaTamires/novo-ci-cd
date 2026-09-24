@@ -11,13 +11,12 @@ jobs:
 
     runs-on: ubuntu-latest
     strategy:
-      max-parallel: 2
+      max-parallel: 3
       matrix:
-        python-version: ['3.11', '3.12', '3.13']
+        python-version: ['3.12', '3.13', '3.11']
 
     env:
-      SECRET_KEY: $
-      {{secrets.SECRET_KEY}}
+      SECRET_KEY: ${{ secrets.SECRET_KEY }}
       DEBUG: "False"
 
     steps:
